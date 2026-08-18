@@ -1,1 +1,138 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NICAES | Employee Presence</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page-container">
+
+        <section class="attendance-card">
+
+            <!-- Header -->
+            <div class="card-header">
+                <div class="company-logo">
+                    <div class="logo-icon">N</div>
+
+                    <div>
+                        <h1>NICAES</h1>
+                        <p>EMPLOYEE PRESENCE VERIFICATION</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="card-content">
+
+                <div class="welcome-section">
+                    <span class="eyebrow">WELCOME</span>
+                    <h2>Verify your office presence</h2>
+                    <p>
+                        Confirm your physical presence by securely verifying
+                        your current location.
+                    </p>
+                </div>
+
+                <!-- Employee ID -->
+                <div class="form-group">
+                    <label for="employeeId">EMPLOYEE ID</label>
+
+                    <input
+                        type="text"
+                        id="employeeId"
+                        placeholder="Enter your Employee ID"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <!-- Date and Time -->
+                <div class="datetime-grid">
+
+                    <div class="info-box">
+                        <span class="info-label">TODAY</span>
+                        <strong id="currentDate">Loading...</strong>
+                    </div>
+
+                    <div class="info-box">
+                        <span class="info-label">CURRENT TIME</span>
+                        <strong id="currentTime">--:--</strong>
+                    </div>
+
+                </div>
+
+                <!-- Location Status -->
+                <div class="location-section">
+
+                    <span class="info-label">LOCATION STATUS</span>
+
+                    <div class="location-status not-verified" id="locationStatus">
+                        <span class="status-dot"></span>
+                        <span id="statusText">Not verified</span>
+                    </div>
+
+                    <div class="location-details" id="locationDetails">
+                        <div>
+                            <span>Distance from office</span>
+                            <strong id="distanceValue">--</strong>
+                        </div>
+
+                        <div>
+                            <span>GPS Accuracy</span>
+                            <strong id="accuracyValue">--</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Verify Location -->
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="verifyLocationBtn"
+                >
+                    <span>📍</span>
+                    VERIFY MY LOCATION
+                </button>
+
+                <!-- Check In -->
+                <button
+                    type="button"
+                    class="btn btn-checkin"
+                    id="checkInBtn"
+                    disabled
+                >
+                    🔒 CHECK IN
+                </button>
+
+                <!-- Message -->
+                <div
+                    class="message"
+                    id="messageBox"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="card-footer">
+                <span>Secure location-based presence verification</span>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
+```
 
