@@ -1,1 +1,368 @@
+/* =========================
+   RESET & BASE
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background: #f3f5f8;
+    color: #1f2937;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.attendance-card {
+    width: 100%;
+    max-width: 560px;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.card-header {
+    padding: 28px 32px;
+    background: #172554;
+    color: white;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background: white;
+    color: #172554;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.company-logo h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.company-logo p {
+    margin-top: 4px;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    opacity: 0.75;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.card-content {
+    padding: 32px;
+}
+
+.welcome-section {
+    margin-bottom: 28px;
+}
+
+.eyebrow,
+.info-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #6b7280;
+}
+
+.welcome-section h2 {
+    margin-top: 8px;
+    font-size: 25px;
+    color: #111827;
+}
+
+.welcome-section p {
+    margin-top: 10px;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #6b7280;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #172554;
+    box-shadow: 0 0 0 3px rgba(23, 37, 84, 0.10);
+}
+
+
+/* =========================
+   DATE & TIME
+========================= */
+
+.datetime-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.info-box {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.info-box strong {
+    display: block;
+    margin-top: 7px;
+    font-size: 13px;
+    color: #1f2937;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.location-section {
+    padding: 18px;
+    margin-bottom: 20px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.location-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #9ca3af;
+}
+
+.location-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 15px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.location-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.location-details span {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.location-details strong {
+    font-size: 14px;
+    color: #1f2937;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background: #172554;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1e3a8a;
+    transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+}
+
+.btn-checkin {
+    margin-top: 12px;
+    background: #16a34a;
+    color: white;
+}
+
+.btn-checkin:disabled {
+    background: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    display: none;
+    margin-top: 18px;
+    padding: 13px 15px;
+    border-radius: 9px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.message.show {
+    display: block;
+}
+
+.message.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.message.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.message.info {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.card-footer {
+    padding: 17px 32px;
+    background: #f8fafc;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.card-footer span {
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .page-container {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .attendance-card {
+        border-radius: 12px;
+    }
+
+    .card-header {
+        padding: 22px;
+    }
+
+    .card-content {
+        padding: 24px 20px;
+    }
+
+    .welcome-section h2 {
+        font-size: 22px;
+    }
+
+    .datetime-grid,
+    .location-details {
+        grid-template-columns: 1fr;
+    }
+
+    .card-footer {
+        padding: 15px 20px;
+    }
+}
+```
 
